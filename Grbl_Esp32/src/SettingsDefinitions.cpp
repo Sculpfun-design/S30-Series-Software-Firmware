@@ -424,5 +424,5 @@ void make_settings() {
     
     // message_level = +new EnumSetting(NULL, EXTENDED, WG, NULL, "Message/Level", static_cast<int8_t>(MsgLevel::Info), &messageLevels, NULL);
     message_level = +new EnumSetting(NULL, EXTENDED, WG, NULL, "Message/Level", static_cast<int8_t>(MsgLevel::None), &messageLevels, NULL);
-    air_pump_duty = new IntSetting(EXTENDED, WG, "NULL", "Air", DEFAULT_AIR_PUMP_DUTY, 0, MAX_AIR_PUMP_DUTY); 
+    air_pump_duty = new IntSetting(EXTENDED, WG, NULL, "Air", DEFAULT_AIR_PUMP_DUTY, 0, MAX_AIR_PUMP_DUTY); 
 }
