@@ -1,0 +1,2 @@
+TMCStepper@>=0.7.0,<1.0.0
+ESP8266 and ESP32 OLED driver for SSD1306 displays@^4.2.0
