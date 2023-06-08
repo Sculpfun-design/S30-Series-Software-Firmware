@@ -23,7 +23,7 @@
 
 #include "Grbl.h"
 
-#ifdef USE_SCULPFUN_AIR_PUMP 
+#ifdef USE_SCULPFUN_AIR_PUMP
 #    include "driver/timer.h"
 hw_timer_t    *timer        = NULL;
 bool           airPumpState = false;
@@ -88,6 +88,9 @@ void coolant_init()
 #    ifdef COOLANT_FLOOD_PIN
     pinMode ( COOLANT_FLOOD_PIN, OUTPUT );
 #    endif
+#ifdef COOLANT_MIST_PIN
+    pinMode ( COOLANT_MIST_PIN, OUTPUT );
+#endif
     timer = timerBegin ( 1, 80, true );
     timerAttachInterrupt ( timer, &timer_callback, true );
     timerAlarmWrite ( timer, 40, true );
